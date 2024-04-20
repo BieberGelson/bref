@@ -27,6 +27,7 @@ namespace bref
                 if (obj is Tekla.Structures.Model.Beam)
                 {
                     var Viga = obj as Tekla.Structures.Model.Beam;
+                    
                     mod.AdicionarObjetoModelo(new VigaModelo(Viga));
                 
                 }
@@ -38,6 +39,7 @@ namespace bref
         private void button2_Click(object sender, EventArgs e)
         {
             var mod = mbase.Carregar("D:\\teste.mod");
+            mod.CriarModeloTekla();
         }
     }
 }
